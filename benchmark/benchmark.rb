@@ -5,27 +5,27 @@ Benchmark.bm do |r|
   a = [] 
   l = nil
 
-  r.report("Insert into Array") do
+  r.report "Insert into Array" do
     100000.times do
       i = +1 
       a.insert 0,i 
     end
   end
 
-  r.report("Insert into LinkedList") do 
+  r.report "Insert into LinkedList" do 
     100000.times do 
       i = +1 
       l = LinkedList.new(i, l)
     end 
   end
 
-  r.report("Reverse an Array") do
+  r.report "Reverse an Array" do
     1000.times do 
       a.reverse
     end
   end
 
-  r.report("Reverse a LinkedList") do 
+  r.report "Reverse a LinkedList" do 
     1000.times do 
       l.reverse
     end 
