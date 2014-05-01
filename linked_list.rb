@@ -1,6 +1,6 @@
 LinkedList = Struct.new(:value, :next) do
   def to_s
-    values = self.value.to_str
+    values = self.value
     element = self.next
     while element
       values = "#{values} -> #{element.value}"

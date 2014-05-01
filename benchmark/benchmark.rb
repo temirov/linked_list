@@ -20,14 +20,26 @@ Benchmark.bm do |r|
   end
 
   r.report "Reverse an Array" do
-    1000.times do 
+    100.times do 
       a.reverse
     end
   end
 
   r.report "Reverse a LinkedList" do 
-    1000.times do 
+    100.times do 
       l.reverse
+    end 
+  end
+
+  r.report "Convert an Array to a String" do 
+    100.times do 
+      a.join(' -> ')
+    end 
+  end
+
+  r.report "Convert a LinkedList to a String" do 
+    100.times do 
+      l.to_s
     end 
   end
 end
